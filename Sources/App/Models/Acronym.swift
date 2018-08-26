@@ -1,5 +1,5 @@
 import Vapor
-import FluentSQLite
+import FluentPostgreSQL
 
 // It’s good practice to mark classes final, where possible, as it provides a performance benefit.
 // Models must conform to 'Codable'
@@ -24,7 +24,7 @@ final class Acronym: Codable {
 
 // Aboove code can be improved further with SQLiteModel:
 
-extension Acronym: SQLiteModel {}
+extension Acronym: PostgreSQLModel {}
 extension Acronym: Migration {}
 // Vapor provides Content, a wrapper around Codable, which allows you to convert models and other data between various formats.
 extension Acronym: Content {}
